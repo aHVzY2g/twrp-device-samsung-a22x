@@ -1,0 +1,7 @@
+ro.display.series=Samsung A22X 5G
+ro.product.board=S96801AA1
+ro.board.platform=mt6833
+sys.usb.controller=musb-hdrc
+ro.boot.dynamic_partitions=true
+#fbe.metadata.wrappedkey=true
+ro.boot.boot_devices=bootdevice,soc/11230000.mmc,11230000.mmc,soc/11270000.ufshci,11270000.ufshci

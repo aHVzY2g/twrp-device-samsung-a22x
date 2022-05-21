@@ -5,12 +5,6 @@ vendor	/vendor		ext4								flags=display="Vendor";first_stage_mount;logical;
 product	/product	ext4								flags=display="Product";first_stage_mount;logical;
 odm	/odm		ext4								flags=display="ODM";first_stage_mount;logical;
 
-# Symlinked partitions
-/system_image	emmc		/dev/block/bootdevice/by-name/system			flags=backup=1;flashimg=1;logical;display="System Image";
-/vendor_image	emmc		/dev/block/bootdevice/by-name/vendor			flags=backup=1;flashimg=1;logical;display="Vendor Image";
-/product_image	emmc		/dev/block/bootdevice/by-name/product			flags=backup=1;flashimg=1;logical;display="Product Image";
-/odm_image	emmc		/dev/block/bootdevice/by-name/odm			flags=backup=1;flashimg=1;logical;display="ODM Image";
-
 # Physical partitions
 /metadata	ext4		/dev/block/platform/bootdevice/by-name/metadata		flags=backup=1;display="Metadata";wipeingui;
 /super_image		emmc		/dev/block/platform/bootdevice/by-name/super		flags=backup=1;display="Super";flashimg=1;

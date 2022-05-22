@@ -43,10 +43,10 @@ jobs:
             sudo curl --create-dirs -L -o /usr/local/bin/repo -O -L https://storage.googleapis.com/git-repo-downloads/repo
             sudo chmod a+rx /usr/local/bin/repo
             
-       - uses: webfactory/ssh-agent@v0.5.4
-         with:
-              ssh-private-key: |
-                    ${{ secrets.SSH_PRIVATE_KEY }}
+       #- uses: webfactory/ssh-agent@v0.5.4
+       #  with:
+       #       ssh-private-key: |
+       #             ${{ secrets.SSH_PRIVATE_KEY }}
             
 
        - name: Sync recovery source and device tree

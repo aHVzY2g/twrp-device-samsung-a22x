@@ -59,6 +59,7 @@ TARGET_PREBUILT_DTB := device/samsung/a22x/prebuilt/dtb.img
 BOARD_PREBUILT_DTBOIMAGE := device/samsung/a22x/prebuilt/dtbo.img
 #BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_INCLUDE_RECOVERY_DTBO := true
+TARGET_KERNEL_ARCH := arm64
 
 # Boot
 BOARD_BOOT_HEADER_VERSION := 2

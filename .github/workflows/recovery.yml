@@ -69,13 +69,13 @@ jobs:
          run: |
               cd work
               . build/envsetup.sh &&lunch twrp_$DEVICE-eng &&export ALLOW_MISSING_DEPENDENCIES=true && mka $TARGET
-              sudo apt update && sudo apt install zip
-              sudo apt update && sudo apt install zip
-              zip -r rec.zip /home/runner/work/Recovery-Builder/Recovery-Builder/work/out/target/product/$DEVICE/$OUTPUT
+       #       sudo apt update && sudo apt install zip
+       #       sudo apt update && sudo apt install zip
+       #       zip -r rec.zip /home/runner/work/Recovery-Builder/Recovery-Builder/work/out/target/product/$DEVICE/$OUTPUT
              
        - name: Save
          uses: actions/upload-artifact@v3
          with:
             name: my-artifact
-            path: /home/runner/work/Recovery-Builder/Recovery-Builder/work/rec.zip
+            path: /home/runner/work/Recovery-Builder/Recovery-Builder/work/out/target/product/a22x/recovery.tar
             retention-days: 5

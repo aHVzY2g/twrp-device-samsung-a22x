@@ -71,7 +71,7 @@ jobs:
               . build/envsetup.sh &&lunch twrp_$DEVICE-eng &&export ALLOW_MISSING_DEPENDENCIES=true && mka $TARGET
               sudo apt update && sudo apt install zip
               sudo apt update && sudo apt install zip
-              zip -r rec.zip /home/runner/work/twrp-Builder/twrp-Builder/work/out/target/product/$DEVICE/$OUTPUT
+              zip -r rec.zip twrp-Builder/twrp-Builder/work/out/target/product/$DEVICE/$OUTPUT
              
        - name: Save
          uses: actions/upload-artifact@v3

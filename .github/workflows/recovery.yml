@@ -78,5 +78,5 @@ jobs:
          uses: actions/upload-artifact@v3
          with:
             name: my-artifact
-            path: /home/runner/work/$DT_REPO_NAME/§DT_REPO_NAME/work/recovery.tar
+            path: /home/runner/work/android-device-samsung-a22x/android-device-samsung-a22x/work/recovery.tar
             retention-days: 5

@@ -16,9 +16,10 @@ env:
   MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-11
   DEVICE: a22x
   DT_LINK: https://github.com/aHVzY2g/android-device-samsung-a22x/
+  DT_REPO_NAME: android-device-samsung-a22x
   DT_PATH: device/samsung/a22x
   TARGET: recoveryimage
-  OUTPUT: recovery.img
+  OUTPUT: recovery.tar
 
 jobs:
   build:
@@ -71,11 +72,11 @@ jobs:
               . build/envsetup.sh &&lunch twrp_$DEVICE-eng &&export ALLOW_MISSING_DEPENDENCIES=true && mka $TARGET
               sudo apt update && sudo apt install zip
               sudo apt update && sudo apt install zip
-              zip -r rec.zip out/target/product/$DEVICE/$OUTPUT
+              zip -r recovery.zip out/target/product/$DEVICE/$OUTPUT
               pwd
        - name: Save
          uses: actions/upload-artifact@v3
          with:
             name: my-artifact
-            path: /home/runner/work/rec.zip
+            path: /home/runner/work/$DT_REPO_NAME/§DT_REPO_NAME/work/recovery.tar
             retention-days: 5

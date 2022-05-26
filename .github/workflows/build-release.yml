@@ -1,4 +1,4 @@
-name: Building recovery
+name: build release
 
 on:
 #  release:

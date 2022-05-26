@@ -70,13 +70,10 @@ jobs:
          run: |
               cd work
               . build/envsetup.sh &&lunch twrp_$DEVICE-eng &&export ALLOW_MISSING_DEPENDENCIES=true && mka $TARGET
-            #  sudo apt update && sudo apt install zip
-            #  sudo apt update && sudo apt install zip
-            #  zip -r recovery.zip out/target/product/$DEVICE/$OUTPUT
-            
+
        - name: Save
          uses: actions/upload-artifact@v3
          with:
-            name: my-artifact
+            name: twrp-recovery
             path: /home/runner/work/android-device-samsung-a22x/android-device-samsung-a22x/work/out/target/product/a22x/recovery.tar
             retention-days: 5

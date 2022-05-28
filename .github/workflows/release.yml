@@ -108,7 +108,9 @@ jobs:
         export LC_ALL=C
         source build/envsetup.sh
         lunch ${{ github.event.inputs.LIBRARY_NAME }}_${{ github.event.inputs.DEVICE_NAME }}-eng
+        sudo chmod a+rx ${{ github.event.inputs.DEVICE_PATH }}/mkbootimg
         make clean && make clobber
+
         mka adbd recoveryimage -j$(nproc --all)
         
     - name: Upload to Release

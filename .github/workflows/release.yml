@@ -1,4 +1,4 @@
-name: Make S20 FE (Snapdragon) Recovery
+name: Make A22 5G (MediaTek) TWRP Recovery
 
 on:
   workflow_dispatch:

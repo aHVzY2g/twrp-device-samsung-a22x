@@ -1,3 +1,7 @@
+system        /system  ext4                                             wait,logical,first_stage_mount
+/system_image emmc     /dev/block/bootdevice/by-name/system             flags=backup=0;flashimg;display="System Image"
+
+
 /boot         emmc     /dev/block/platform/bootdevice/by-name/boot      flags=backup=1;display="Boot";flashimg;
 /cache        ext4     /dev/block/platform/bootdevice/by-name/cache     flags=backup=1;display="Cache";
 /efs          ext4     /dev/block/platform/bootdevice/by-name/sec_efs   flags=backup=1;display="EFS";
